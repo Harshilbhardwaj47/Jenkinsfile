@@ -27,6 +27,12 @@ try {
 
 
 				])
+				
+				stage('Test')
+				steps{
+					bat '.\mvnw test'
+				}
+				
 			}
 		} catch(Exception ex) {
 			println ex.getCause();
